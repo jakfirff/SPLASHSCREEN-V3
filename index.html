@@ -17,7 +17,7 @@
         }
       </script>
   <script type="module" src="./assets/js/splashscreen.js"></script>
-  <script type="module" src="./assets/js/change images.js"></script>
+  <script type="module" src="./assets/js/change images.js" defer></script>
 
 </head>
 <body class="custom" style="background-color:black;"></body>
@@ -49,21 +49,7 @@
 
           <h6><br></h6>
           <div id="photoselect" class="photos">
-              <a href="images/PORTFOLIO/1.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/1.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/2.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/2.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/3.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/3.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/4.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/4.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/5.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/5.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/6.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/6.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/7.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/7.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/8.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/8.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/9.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/9.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/10.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/10.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/11.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/11.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/12.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/12.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/13.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/13.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/14.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/14.jpg" alt="TEST" /></a>
-              <a href="images/PORTFOLIO/15.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/15.jpg" alt="TEST" /></a>
+
           </div>     
 <!-- Scripts -->
   <script src='assets/js/jquery-1.11.3.js'></script>
@@ -124,6 +110,21 @@
           $('[data-lightbox]').off('click')
       });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM fully loaded and parsed");
+
+        // Delay the function call by 2 seconds
+        setTimeout(function() {
+            if (typeof portfolio_images === 'function') {
+                console.log("Calling portfolio_images function");
+                portfolio_images();
+            } else {
+                console.error("portfolio_images function is not defined");
+            }
+        }, 2000);
+    });
+</script>
   <!-- 100% privacy-first analytics -->
   <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>

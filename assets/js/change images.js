@@ -1,3 +1,5 @@
+console.log("external.js loaded");
+
 document.addEventListener('DOMContentLoaded', function() {
     // Call garment_images function to load images and apply styles
 
@@ -121,8 +123,6 @@ const imagesToPreload = [
     "images/GARMENTS/10.png",
     "images/GARMENTS/11.png",
     "images/GARMENTS/12.png",
-    "images/GARMENTS/13.png",
-    "images/GARMENTS/14.png"
 ];
 
 // Function to preload images
