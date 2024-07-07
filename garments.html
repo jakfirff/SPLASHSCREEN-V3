@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="google-site-verification" content="D0-1J7kqygZ1LMUTVCdwGhUP5wwKsnFnhg8f_2l-5fI" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/lightbox-locked.css" />
+  <link rel="stylesheet" href="public/index.css">
+  <title>WSP</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+        }
+      }
+    </script>
+  <script type="module" src="./main.js"></script>
+
+</head>
+<body class="custom" style="background-color:black;"></body>
+
+
+          <div class="container">
+              <h4><br></h4>
+              <h2><a href="/" >Jack Firth<a/></h2>
+              <div>
+                <h5>
+                  <div>
+                    <a href='garments.html' target="_self" class="button">Home</a>
+                    &nbsp;|&nbsp; 
+                    <a target="_blank" href="https://www.wsp.pw" class="button">Shop</a>
+                  </div>
+                </h5>
+          </div>
+
+
+          <h6><br></h6>
+          <section id="photos2">
+            <a href="images/GARMENTS/1.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/1.png" alt="TEST" /></a>
+            <a href="images/GARMENTS/2.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/2.png" alt="TEST" /></a>
+            <a href="images/GARMENTS/3.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/3.png" alt="TEST" /></a>
+            <a href="images/GARMENTS/4.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/4.png" alt="TEST" /></a>
+            <a href="images/GARMENTS/5.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/5.png" alt="TEST" /></a>
+            <a href="images/GARMENTS/6.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/6.png" alt="TEST" /></a>
+            <a href="images/GARMENTS/7.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/7.png" alt="TEST" /></a>
+            <a href="images/GARMENTS/8.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/8.png" alt="TEST" /></a>
+            <a href="images/GARMENTS/9.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/9.png" alt="TEST" /></a>
+            <a href="images/GARMENTS/10.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/10.png" alt="TEST" /></a>
+            <a href="images/GARMENTS/11.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/11.png" alt="TEST" /></a>
+            <a href="images/GARMENTS/12.png" data-lightbox="test" data-title="GARMENTS"><img src="" class="lazy" data-src="images/GARMENTS/12.png" alt="TEST" /></a>
+          </section>        
+<!-- Scripts -->
+  <script src='assets/js/jquery-1.11.3.js'></script>
+  <script src='assets/js/jquery.mobile-1.4.5.min.js'></script>
+  <script src="assets/js/jquery.lazy.min.js"></script>
+  <script src="assets/js/lightbox-locked.js"></script> <!-- this is an edited file -->
+  <script>
+  $.mobile.loading().hide();
+  </script>
+  <script>
+  $(function() {
+      $('.lazy').lazy({
+          threshold: 500,
+          effect: "fadeIn",
+          effectTime: 400,
+          enableThrottle: true,
+          throttle: 50,
+      });
+  });
+  </script>
+  <script>
+      lightbox.option({
+      'showImageNumberLabel' : false,
+      'wrapAround': true,
+      'positionFromTop': 10,
+      'resizeDuration': 0,
+      'imageFadeDuration': 300,
+      'fadeDuration': 300,
+      'disableScrolling': true
+      })
+  </script>
+  <script>
+  function leftTrigger(){
+          setTimeout(function(){
+              $('.lightbox').on('swipeleft', leftHandler);
+
+              function leftHandler(){
+              $('.lb-next').click();
+              }
+          }, 0);
+      }
+
+      
+
+      function rightTrigger(){
+          setTimeout(function(){
+              $('.lightbox').on('swiperight', leftHandler);
+
+              function leftHandler(){
+              $('.lb-prev').click();
+              }
+          }, 0);
+      }
+  
+      $('[data-lightbox]').on('click', function(){
+          leftTrigger();
+          rightTrigger();
+          $('[data-lightbox]').off('click')
+      });
+  </script>
+  <!-- 100% privacy-first analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+</body>
+</html>

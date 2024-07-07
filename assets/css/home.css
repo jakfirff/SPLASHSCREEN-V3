@@ -315,7 +315,6 @@ input, select, textarea {
 
 /*lazy*/
 	.lazy {
-		background-image: url('https://nikospantazis.com/assets/images/loading.gif');
 		background-repeat: no-repeat;
         background-position: 50% 50%;
 }
@@ -916,6 +915,28 @@ input, select, textarea {
   height: auto !important;
   box-shadow: 0px 0px 6px 1px #212121;
 }
+
+#photos2 {
+
+    line-height:         5vw;
+    margin:              2vw;
+   -webkit-column-count: 2;
+   -webkit-column-gap:   0px;
+   -moz-column-count:    2;
+   -moz-column-gap:      0px;
+   column-count:         2;
+   column-gap:           2vw;
+
+}
+
+#photos2 img {
+	/* Just in case there are inline attributes */
+	width: 100% !important;
+	height: auto !important;
+	-webkit-filter: drop-shadow(0px 0px 5px #ff0000);
+  	filter: drop-shadow(0px 0px 5px #ff0000);
+  }
+
 
 @media (max-width: 1200px) {
   #photos {
