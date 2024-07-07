@@ -186,17 +186,6 @@
       we set the pointer events back to auto for the nav div so it can capture hover and left-click
       events as usual.
      */
-    this.$nav.on('mousedown', function(event) {
-      if (event.which === 3) {
-        self.$nav.css('pointer-events', 'none');
-
-        self.$lightbox.one('contextmenu', function() {
-          setTimeout(function() {
-              this.$nav.css('pointer-events', 'auto');
-          }.bind(self), 0);
-        });
-      }
-    });
 
 
     this.$lightbox.find('.lb-loader, .lb-close').on('click', function() {

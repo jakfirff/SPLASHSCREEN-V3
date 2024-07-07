@@ -680,6 +680,8 @@ input, select, textarea {
     outline: none;
 }
 
+
+
 /* Icons */
 
 	ul.icons {
@@ -896,46 +898,49 @@ input, select, textarea {
 
 /* Photos */
 
-#photos {
 
-    line-height:         5vw;
-    margin:              2vw;
-   -webkit-column-count: 1;
-   -webkit-column-gap:   0px;
-   -moz-column-count:    3;
-   -moz-column-gap:      0px;
-   column-count:         1;
-   column-gap:           2vw;
 
-}
+.photos {
 
-#photos img {
-  /* Just in case there are inline attributes */
-  width: 100% !important;
-  height: auto !important;
-  box-shadow: 0px 0px 6px 1px #212121;
-}
-
-#photos2 {
-
-    line-height:         5vw;
-    margin:              2vw;
-   -webkit-column-count: 2;
-   -webkit-column-gap:   0px;
-   -moz-column-count:    2;
-   -moz-column-gap:      0px;
-   column-count:         2;
-   column-gap:           2vw;
+line-height:         5vw;
+margin:              2vw;
+-webkit-column-count: 1;
+-webkit-column-gap:   0px;
+-moz-column-count:    3;
+-moz-column-gap:      0px;
+column-count:         1;
+column-gap:           2vw;
 
 }
 
-#photos2 img {
-	/* Just in case there are inline attributes */
-	width: 100% !important;
-	height: auto !important;
-	-webkit-filter: drop-shadow(0px 0px 5px #ff0000);
-  	filter: drop-shadow(0px 0px 5px #ff0000);
-  }
+.photos img {
+/* Just in case there are inline attributes */
+width: 100% !important;
+height: auto !important;
+box-shadow: 0px 0px 6px 1px #212121;
+}
+
+.photos2 {
+
+line-height:         5vw;
+margin:              2vw;
+-webkit-column-count: 2;
+-webkit-column-gap:   0px;
+-moz-column-count:    2;
+-moz-column-gap:      0px;
+column-count:         2;
+column-gap:           2vw;
+
+}
+
+.photos2 img {
+/* Just in case there are inline attributes */
+width: 100% !important;
+height: auto !important;
+-webkit-filter: drop-shadow(0px 0px 5px #ff0000);
+filter: drop-shadow(0px 0px 5px #ff0000);
+}
+
 
 
 @media (max-width: 1200px) {
