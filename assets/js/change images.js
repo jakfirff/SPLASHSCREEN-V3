@@ -43,8 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add a class to the garments div
 		galleryDiv.className = '';
 		galleryDiv.classList.add('photos2');
-
-		galleryDiv.style.display = 'block';
         
 
         console.log('Images dynamically added and class "photos2" added to garments div.');
