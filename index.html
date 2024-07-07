@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="google-site-verification" content="D0-1J7kqygZ1LMUTVCdwGhUP5wwKsnFnhg8f_2l-5fI" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/lightbox-locked.css" />
+  <link rel="stylesheet" href="public/index.css">
+  <title>WSP</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+        }
+      }
+    </script>
+  <script type="module" src="./main.js"></script>
+
+</head>
+<body class="custom" style="background-color:black;"></body>
+
+
+          <div class="container">
+              <h4><br></h4>
+              <h2><b>Jack Firth</b></h2>
+              <div>
+                <h5>
+                  <div>
+                    <a href='about-me.html' target="_self" class="button">Garments</a>
+                    &nbsp;|&nbsp; 
+                    <a target="_blank" href="https://www.wsp.pw" class="button">Shop</a>
+                  </div>
+                </h5>
+          </div>
+
+
+          <h6><br></h6>
+          <section id="photos">
+            <a href="images/PORTFOLIO/1.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/1.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/2.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/2.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/3.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/3.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/4.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/4.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/5.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/5.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/6.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/6.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/7.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/7.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/8.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/8.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/9.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/9.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/10.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/10.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/11.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/11.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/12.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/12.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/13.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/13.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/14.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/14.jpg" alt="TEST" /></a>
+            <a href="images/PORTFOLIO/15.jpg" data-lightbox="test" data-title="PORTFOLIO"><img src="" class="lazy" data-src="images/PORTFOLIO/15.jpg" alt="TEST" /></a>
+          </section>        
+<!-- Scripts -->
+  <script src='assets/js/jquery-1.11.3.js'></script>
+  <script src='assets/js/jquery.mobile-1.4.5.min.js'></script>
+  <script src="assets/js/jquery.lazy.min.js"></script>
+  <script src="assets/js/lightbox-locked.js"></script> <!-- this is an edited file -->
+  <script>
+  $.mobile.loading().hide();
+  </script>
+  <script>
+  $(function() {
+      $('.lazy').lazy({
+          threshold: 500,
+          effect: "fadeIn",
+          effectTime: 400,
+          enableThrottle: true,
+          throttle: 50,
+      });
+  });
+  </script>
+  <script>
+      lightbox.option({
+      'showImageNumberLabel' : false,
+      'wrapAround': true,
+      'positionFromTop': 10,
+      'resizeDuration': 0,
+      'imageFadeDuration': 300,
+      'fadeDuration': 300,
+      'disableScrolling': true
+      })
+  </script>
+  <script>
+  function leftTrigger(){
+          setTimeout(function(){
+              $('.lightbox').on('swipeleft', leftHandler);
+
+              function leftHandler(){
+              $('.lb-next').click();
+              }
+          }, 0);
+      }
+
+      
+
+      function rightTrigger(){
+          setTimeout(function(){
+              $('.lightbox').on('swiperight', leftHandler);
+
+              function leftHandler(){
+              $('.lb-prev').click();
+              }
+          }, 0);
+      }
+  
+      $('[data-lightbox]').on('click', function(){
+          leftTrigger();
+          rightTrigger();
+          $('[data-lightbox]').off('click')
+      });
+  </script>
+  <!-- 100% privacy-first analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+</body>
+</html>
