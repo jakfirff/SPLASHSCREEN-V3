@@ -112,7 +112,7 @@ function init() {
   // Load the GLTF model
   const loader = new GLTFLoader();
   loader.load(
-    'public/millennium_falcon/scene.gltf',
+    'assets/threeJS/scene.gltf',
     (gltf) => {
       console.log('Model loaded successfully:', gltf);
       model = gltf.scene;
