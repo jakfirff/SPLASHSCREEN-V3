@@ -22,19 +22,28 @@ function preventDefaultKeys(event) {
   }
 }
 
+
+
 function preventScrolling() {
+  // Prevent scrolling with the mouse wheel
   window.addEventListener('wheel', preventDefaultScroll, { passive: false });
+  // Prevent scrolling with touch
   window.addEventListener('touchmove', preventDefaultScroll, { passive: false });
+  // Prevent scrolling with keyboard
   window.addEventListener('keydown', preventDefaultKeys, { passive: false });
 }
 
 function allowScrolling() {
+  document.documentElement.style.setProperty('--custom-scrollbar-shadow', 'inset 0 0 999px rgb(255, 255, 255)');
+  // Allow scrolling with the mouse wheel
   window.removeEventListener('wheel', preventDefaultScroll, { passive: false });
+  // Allow scrolling with touch
   window.removeEventListener('touchmove', preventDefaultScroll, { passive: false });
+  // Allow scrolling with keyboard
   window.removeEventListener('keydown', preventDefaultKeys, { passive: false });
 }
-
 preventScrolling();
+
 
 function fadeOutThreeJs() {
   const canvas = document.querySelector('#myCanvas');
@@ -51,10 +60,8 @@ function fadeOutThreeJs() {
 function init() {
   scene = new THREE.Scene();
 
-
   camera = new THREE.PerspectiveCamera(5, window.innerWidth / window.innerHeight, 0.5, 50000);
   camera.position.set(0, 0, 90);
-
   const modelPosition = new THREE.Vector3(0, 1.05, -1);
   camera.lookAt(modelPosition);
 
@@ -76,7 +83,6 @@ function init() {
   spotLight.castShadow = true;
   scene.add(spotLight);
   
-
   bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 0.3, 0.9, 0);
   composer.addPass(bloomPass);
 
@@ -94,7 +100,7 @@ function init() {
           const emissiveMaterial = new THREE.MeshStandardMaterial({
             color: 0xffffff,
             emissive: 0xff0000,
-            emissiveIntensity: 5
+            emissiveIntensity: 3,
           });
           child.material = emissiveMaterial;
           modelEmissiveMaterial = emissiveMaterial;
@@ -136,9 +142,8 @@ function init() {
 
 
 
-const circleRadiusX = 0.4;  // Radius of the circle width
+const circleRadiusX = 0.2;  // Radius of the circle width
 const circleRadiusY = 0.35;  // Radius of the circle height
-
 function isInsideClickableBox(coords) {
   const circleCenter = { x: 0, y: 0 }; // Center of the screen
 
@@ -185,7 +190,7 @@ function onClick(event) {
         action.loop = THREE.LoopOnce;
         action.reset();
         action.play();
-        targetEmissiveIntensity = 5;
+        targetEmissiveIntensity = 4.8;
         setTimeout(fadeOutThreeJs, 5400);
         setTimeout(allowScrolling, 6200);
       }
@@ -204,7 +209,7 @@ function onClick(event) {
         action.loop = THREE.LoopOnce;
         action.reset();
         action.play();
-        targetEmissiveIntensity = 0;
+        targetEmissiveIntensity = 4.8;
         setTimeout(fadeOutThreeJs, 5400);
         setTimeout(allowScrolling, 6400);
       }
@@ -212,7 +217,7 @@ function onClick(event) {
   }
 }
 
-let targetEmissiveIntensity = 5;
+let targetEmissiveIntensity = 4;
 const transitionSpeed = 0.1; // Adjust this value to change the transition speed
 
 function onMouseMove(event) {
@@ -225,10 +230,10 @@ function onMouseMove(event) {
   };
 
   if (isInsideClickableBox(normalizedCoords)) {
-    targetEmissiveIntensity = 5.8;
+    targetEmissiveIntensity = 4.8;
     renderer.domElement.style.cursor = "pointer";
   } else {
-    targetEmissiveIntensity = 5;
+    targetEmissiveIntensity = 4;
     renderer.domElement.style.cursor = "auto";
   }
 }
