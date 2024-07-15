@@ -48,3 +48,9 @@
 }
 
 
+#circleCanvas {
+  position: absolute;
+  z-index: 999; /* Adjust the z-index value as needed */
+  border: 1px solid rgb(64, 0, 255);
+}
+
