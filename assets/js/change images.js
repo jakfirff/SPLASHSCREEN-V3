@@ -73,7 +73,10 @@ document.addEventListener('DOMContentLoaded', function() {
             { href: "images/PORTFOLIO/12.jpg", 'data-lightbox': "test", 'data-title': "PORTFOLIO", 'data-src': "images/PORTFOLIO/12.jpg", alt: "TEST" },
             { href: "images/PORTFOLIO/13.jpg", 'data-lightbox': "test", 'data-title': "PORTFOLIO", 'data-src': "images/PORTFOLIO/13.jpg", alt: "TEST" },
             { href: "images/PORTFOLIO/14.jpg", 'data-lightbox': "test", 'data-title': "PORTFOLIO", 'data-src': "images/PORTFOLIO/14.jpg", alt: "TEST" },
-            { href: "images/PORTFOLIO/15.jpg", 'data-lightbox': "test", 'data-title': "PORTFOLIO", 'data-src': "images/PORTFOLIO/15.jpg", alt: "TEST" }
+            { href: "images/PORTFOLIO/15.jpg", 'data-lightbox': "test", 'data-title': "PORTFOLIO", 'data-src': "images/PORTFOLIO/15.jpg", alt: "TEST" },
+            { href: "images/PORTFOLIO/16.jpg", 'data-lightbox': "test", 'data-title': "PORTFOLIO", 'data-src': "images/PORTFOLIO/16.jpg", alt: "TEST" },
+            { href: "images/PORTFOLIO/17.jpg", 'data-lightbox': "test", 'data-title': "PORTFOLIO", 'data-src': "images/PORTFOLIO/17.jpg", alt: "TEST" },
+            { href: "images/PORTFOLIO/18.jpg", 'data-lightbox': "test", 'data-title': "PORTFOLIO", 'data-src': "images/PORTFOLIO/18.jpg", alt: "TEST" }
             // Add more images as needed
         ];
 
